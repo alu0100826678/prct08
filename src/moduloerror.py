@@ -6,15 +6,14 @@ import modulopi
 def error(interv,n_test,umbral):
     resta=0.0  
     y = modulopi.PI        
+    fallos = 0
     for i in range(0,n_test):
       x = modulopi.funcion(interv)
       resta = abs(x -y)   
       if resta > umbral:
-	print "La aproximacion es : " porcentaje)
-      else 
-        print "La aproximacion es: " funcion)
-	
-      return resta
+         fallos=fallos+1
+    porcentaje= n_test/fallos*100
+    return porcentaje
     
 if __name__ == "__main__":
    if len(sys.argv) == 4:
